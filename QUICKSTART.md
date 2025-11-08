@@ -20,13 +20,17 @@ npm run preview      # Preview production build locally
 
 ## 🌐 Deploy to Netlify
 
-### Quick Deploy:
+### Quick Deploy
+
 ```powershell
 npm run build
 ```
-Then drag `dist/` folder to https://app.netlify.com
 
-### Or use Netlify CLI:
+Then drag `dist/` folder to <https://app.netlify.com>
+
+
+### Or use Netlify CLI
+
 ```powershell
 npm install -g netlify-cli
 netlify login
@@ -38,11 +42,14 @@ Form submissions will appear in Netlify dashboard automatically.
 
 ## 🎨 Common Edits
 
-### Change phone/email globally:
+### Change phone/email globally
+
 Edit `src/layouts/Layout.astro` lines 9-11
 
-### Add a new service:
+### Add a new service
+
 Edit `src/pages/services.astro`, add:
+
 ```astro
 <ServiceDetail 
   title="Service Name"
@@ -52,12 +59,13 @@ Edit `src/pages/services.astro`, add:
 </ServiceDetail>
 ```
 
-### Change colors:
+### Change colors
+
 Edit `src/styles/global.css` `:root` variables
 
 ## 📦 Project Structure
 
-```
+```text
 src/
 ├── layouts/Layout.astro    # Header/footer/nav
 ├── components/             # Reusable components
