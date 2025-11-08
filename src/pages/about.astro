@@ -1,57 +1,74 @@
 ---
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
-import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
-import Sectionhead from "@/components/sectionhead.astro";
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
+import Layout from "@/layouts/Layout.astro";
+import Link from "@/components/ui/link.astro";
 ---
 
-<Layout title="About">
+<Layout title="About — Jason Fallas Contracting | Building Dreams in NJ">
   <Container>
-    <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
-    </Sectionhead>
-
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+    <div class="mt-16 max-w-4xl mx-auto">
+      <h1 class="text-5xl lg:text-6xl font-bold lg:tracking-tight text-center">
+        About Jason Fallas Contracting
+      </h1>
+      <p class="text-xl mt-6 text-slate-600 text-center">
+        Expert craftsmanship and reliable service across Union, Morris, and Warren County, New Jersey.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-sm transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
+    <div class="max-w-4xl mx-auto mt-16 prose prose-lg">
+      <h2>Our Approach</h2>
+      <p>
+        At JF Contracting, we bring your vision to life with precision, craftsmanship, and care. We specialize in delivering high-quality construction, renovations, and home improvement services across New Jersey.
+      </p>
+      
+      <p>
+        From complete home renovations to custom carpentry and detailed 3D renderings, we approach every project with the same commitment to quality. Whether it's refinishing hardwood floors, remodeling a commercial space like Perch H&C in Maplewood, or building custom cabinetry, we deliver results that exceed expectations.
+      </p>
+
+      <h2>What Sets Us Apart</h2>
+      <ul>
+        <li><strong>Expert Craftsmanship:</strong> Years of experience in carpentry, painting, renovations, and general contracting.</li>
+        <li><strong>Custom Solutions:</strong> Every project is tailored to your specific needs and vision.</li>
+        <li><strong>Trusted Network:</strong> We work with reliable subcontractors for plumbing, electrical, and specialized trades.</li>
+        <li><strong>3D Visualization:</strong> See your project before we build with professional 3D renderings.</li>
+        <li><strong>Professional Service:</strong> Clear communication, reliable timelines, and quality workmanship on every job.</li>
+      </ul>
+
+      <h2>Our Work</h2>
+      <p>
+        We've completed projects ranging from residential renovations to commercial build-outs, including notable work for <strong>Perch H&C in Maplewood</strong>—a stunning retail and café space featuring a curated goods shop, gelato window, coffee and mocktail bar, and event rental facilities.
+      </p>
+      <p>
+        Our portfolio includes kitchen and bathroom remodels, hardwood floor refinishing, custom carpentry, painting, garage installations, and comprehensive general contracting services.
+      </p>
+
+      <h2>Service Area</h2>
+      <p>We focus on two main clusters for efficient scheduling and fast response:</p>
+      <ul>
+        <li><strong>Summit / Short Hills / Mendham corridor</strong> — including Chatham, Springfield, and Union</li>
+        <li><strong>Blairstown & Warren County</strong> — our new local base for steady residential work</li>
+      </ul>
+      <p>Nearby? <a href="/contact">Contact us</a> to confirm coverage—we often take high‑value projects just outside these areas.</p>
+    </div>
+
+  <div class="bg-brand text-white p-8 md:p-12 rounded-lg mt-16 max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Let's Work Together
+      </h2>
+      <p class="text-lg text-slate-300 mb-6">
+        Ready to start your project? Call for a free estimate or request a quote online.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link href="tel:+1-609-598-6392" style="inverted">
+          Call (609) 598-6392
+        </Link>
+        <Link href="/contact" style="outline">
+          Request a Quote
+        </Link>
+      </div>
     </div>
   </Container>
 </Layout>
+</Layout>
+
+---

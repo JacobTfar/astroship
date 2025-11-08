@@ -1,0 +1,21 @@
+---
+import Container from "@/components/container.astro";
+import Layout from "@/layouts/Layout.astro";
+import Link from "@/components/ui/link.astro";
+---
+
+<Layout title="Appointment Confirmed">
+  <Container>
+    <div class="mt-20 max-w-2xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Thanks for scheduling!</h1>
+      <p class="text-lg text-slate-600 mt-4">
+        Jason will reach out within 24 hours to confirm your appointment.
+        For urgent requests, call <a class="text-brand font-medium" href="tel:+1-609-598-6392">(609) 598-6392</a>.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8">
+        <Link href="tel:+1-609-598-6392">Call Now</Link>
+        <Link href="/" style="outline">Back to Home</Link>
+      </div>
+    </div>
+  </Container>
+</Layout>

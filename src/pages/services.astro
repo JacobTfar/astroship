@@ -1,0 +1,136 @@
+---
+import Container from "@/components/container.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "General Contracting",
+    description: "From minor repairs to full-scale renovations, we bring precision and professionalism to every project, ensuring lasting quality and customer satisfaction.",
+    icon: "bx:bxs-briefcase",
+    features: [
+      "Complete home renovations",
+      "Room additions & structural work",
+      "Commercial build-outs (retail, café, office)",
+      "Property repairs & maintenance",
+      "Project management & permitting"
+    ]
+  },
+  {
+    title: "Painting Services",
+    description: "We deliver smooth, flawless finishes with expert brushwork, transforming spaces with high-quality coatings that enhance durability and appeal.",
+    icon: "bx:bxs-paint",
+    features: [
+      "Interior painting (walls, ceilings, trim)",
+      "Exterior painting (siding, doors, shutters)",
+      "Commercial painting projects",
+      "Surface preparation & repair",
+      "Custom color consultation"
+    ]
+  },
+  {
+    title: "Carpentry & Woodwork",
+    description: "Whether it's fine cabinetry, wood flooring refinishing, or detailed framing, our craftsmanship ensures durability, elegance, and personalized design.",
+    icon: "bx:bxs-wrench",
+    features: [
+      "Custom cabinetry & built-ins",
+      "Hardwood floor refinishing",
+      "Trim, molding & millwork",
+      "Framing & structural carpentry",
+      "Furniture repair & restoration"
+    ]
+  },
+  {
+    title: "Custom 3D Renderings",
+    description: "Visualize your space before construction begins with detailed 3D previews, available as an additional service to help bring your vision to life.",
+    icon: "bx:bxs-cube",
+    features: [
+      "Photorealistic 3D renderings",
+      "Space planning & layout design",
+      "Material & finish visualization",
+      "Client presentation packages",
+      "Revisions included"
+    ]
+  },
+  {
+    title: "Garage Installs & Upgrades",
+    description: "From new doors to storage solutions, we create functional garage spaces tailored to your needs. Garage door installs are completed in partnership with Eagle Overhead Doors (family-owned).",
+    icon: "bx:bxs-car-garage",
+    features: [
+      "Garage door installation & repair (by Eagle Overhead Doors)",
+      "Custom storage systems",
+      "Epoxy flooring",
+      "Electrical & lighting upgrades",
+      "Insulation & climate control"
+    ]
+  },
+  {
+    title: "Bathroom Renovations",
+    description: "Expertly crafted bathrooms with custom tile work and plumbing solutions, handled by our trusted subcontractors for seamless, high-quality results.",
+    icon: "bx:bxs-bath",
+    features: [
+      "Complete bathroom remodels",
+      "Custom tile & stone work",
+      "Plumbing fixture upgrades",
+      "Vanity & storage design",
+      "ADA-accessible designs"
+    ]
+  }
+];
+---
+
+<Layout title="Services — Jason Fallas Contracting | Union, Morris & Warren County">
+  <Container>
+    <div class="mt-16">
+      <h1 class="text-5xl lg:text-6xl font-bold lg:tracking-tight">
+        Our Services
+      </h1>
+      <p class="text-lg mt-4 text-slate-600 max-w-3xl">
+        We specialize in high-quality renovations and custom carpentry across the Summit / Short Hills / Mendham corridor, Union / Springfield / Chatham, and Blairstown & Warren County. Local focus. Reliable scheduling. Strong results.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 mt-16">
+      {services.map((service) => (
+        <div class="border border-slate-200 rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 bg-black rounded-full p-3 shrink-0">
+              <Icon class="text-white w-6 h-6" name={service.icon} />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-2xl font-semibold mb-3">{service.title}</h2>
+              <p class="text-slate-600 mb-4">{service.description}</p>
+              <ul class="space-y-2 text-sm text-slate-600">
+                {service.features.map((feature) => (
+                  <li class="flex items-center gap-2">
+                    <Icon class="text-green-600 w-4 h-4 shrink-0" name="bx:bx-check-circle" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-slate-50 p-8 md:p-12 rounded-lg mt-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Let's Talk About Your Project
+      </h2>
+      <p class="text-lg text-slate-600 mb-6">
+        Every job starts with a free estimate. Call or request a quote online.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+1-609-598-6392" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand text-white rounded-md hover:brightness-95 transition-colors">
+          <Icon class="w-5 h-5" name="bx:bxs-phone" />
+          Call (609) 598-6392
+        </a>
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-brand text-brand rounded-md hover:bg-brand hover:text-white transition-colors">
+          <Icon class="w-5 h-5" name="bx:bxs-envelope" />
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </Container>
+</Layout>

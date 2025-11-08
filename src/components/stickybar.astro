@@ -1,0 +1,16 @@
+---
+import Link from "@/components/ui/link.astro";
+---
+
+<div class="fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200 py-3 px-4 md:hidden">
+  <div class="max-w-5xl mx-auto flex items-center gap-3">
+    <Link href="tel:+1-609-598-6392" class="flex-1" size="lg">Call Now</Link>
+    <Link href="/contact" style="outline" class="flex-1" size="lg">Get Quote</Link>
+  </div>
+</div>
+
+<style is:global>
+  @media (max-width: 767px) {
+    body { padding-bottom: 4.5rem; }
+  }
+</style>

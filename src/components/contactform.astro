@@ -10,7 +10,8 @@ import Button from "./ui/button.astro";
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+  <input type="hidden" name="access_key" value="ffd2fa72-63c6-42f1-8090-04e34b52389d" />
+  <input type="hidden" name="redirect" value="https://jfcontracting.biz/confirmation" />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
@@ -41,18 +42,57 @@ import Button from "./ui/button.astro";
       Please provide a valid email address.
     </div>
   </div>
+  <div class="mb-5">
+    <input
+      type="tel"
+      placeholder="Phone Number"
+      name="phone"
+      required
+      pattern="[0-9()+\-\s]{7,}"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100" />
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Please provide a phone number.
+    </div>
+  </div>
+  <div class="mb-5">
+    <select
+      name="service"
+      required
+      class="w-full px-4 py-3 border-2 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 text-gray-800">
+      <option value="" disabled selected>Select Service Needed</option>
+      <option>Bathroom Remodel</option>
+      <option>Flooring / Refinishing</option>
+      <option>Deck / Exterior Project</option>
+      <option>Kitchen Update</option>
+      <option>Carpentry / Built-ins</option>
+      <option>Painting</option>
+      <option>Handyman / Repairs</option>
+      <option>Other</option>
+    </select>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Please select a service.
+    </div>
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      name="preferred_time"
+      placeholder="Preferred Contact Time (e.g. Tomorrow 2–4pm)"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100" />
+  </div>
   <div class="mb-3">
     <textarea
       name="message"
       required
-      placeholder="Your Message"
+      placeholder="Brief Project Details"
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-hidden h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     ></textarea>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please enter your message.
+      Please enter project details.
     </div>
   </div>
-  <Button type="submit" size="lg" block>Send Message</Button>
+  <Button type="submit" size="lg" block style="primary">Request Appointment</Button>
+  <a href="tel:+1-609-598-6392" class="mt-4 inline-block text-center w-full text-brand font-medium">Or call (609) 598-6392 now</a>
   <div id="result" class="mt-3 text-center"></div>
 </form>
 

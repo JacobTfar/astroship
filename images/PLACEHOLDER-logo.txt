@@ -1,0 +1,15 @@
+<!-- 
+  PLACEHOLDER: Replace with real logo
+  
+  Specs:
+  - Format: PNG with transparent background
+  - Size: ~200x200px (or proportional)
+  - File size: < 50 KB
+  
+  Quick logo options:
+  1. Use existing JF Contracting logo
+  2. Create text logo at https://www.canva.com (free)
+  3. Hire on Fiverr ($5-20)
+  
+  Place file at: images/logo.png
+-->

@@ -1,0 +1,17 @@
+---
+import Container from "@/components/container.astro";
+import Layout from "@/layouts/Layout.astro";
+import GoogleReviews from "@/components/google-reviews.astro";
+---
+
+<Layout title="Reviews — What Clients Say">
+  <Container>
+    <div class="mt-16">
+      <h1 class="text-5xl lg:text-6xl font-bold lg:tracking-tight">Reviews</h1>
+      <p class="text-lg mt-4 text-slate-600 max-w-2xl">
+        A few words from homeowners and local businesses who trust JF Contracting.
+      </p>
+    </div>
+  <GoogleReviews />
+  </Container>
+</Layout>

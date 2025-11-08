@@ -4,51 +4,50 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "General Contracting",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      "From minor repairs to full-scale renovations, we bring precision and professionalism to every project with lasting quality.",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Painting Services",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Expert brushwork delivering smooth, flawless finishes that transform spaces with high-quality coatings.",
+    icon: "bx:bxs-paint",
   },
   {
-    title: "On-Demand Components",
+    title: "Carpentry & Woodwork",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Custom cabinetry, hardwood floor refinishing, and detailed framing with craftsmanship that ensures durability and elegance.",
+    icon: "bx:bxs-wrench",
   },
   {
-    title: "Broad Integration",
+    title: "Custom 3D Renderings",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Visualize your space before construction begins with detailed photorealistic 3D previews and design planning.",
+    icon: "bx:bxs-cube",
   },
   {
-    title: "SEO Enabled",
+    title: "Bathroom Renovations",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Expertly crafted bathrooms with custom tile work and plumbing solutions, handled by our trusted subcontractors.",
+    icon: "bx:bxs-bath",
   },
   {
-    title: "Community",
+    title: "Garage Installs & Upgrades",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "From new doors to storage systems, we create functional garage spaces tailored to your needs.",
+    icon: "bx:bxs-car-garage",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    What We Do
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Renovations, bathrooms, carpentry, painting, and more for residential and light commercial projects across NJ.
   </p>
 </div>
 
@@ -56,7 +55,7 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-brand rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>

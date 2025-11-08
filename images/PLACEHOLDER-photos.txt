@@ -1,0 +1,22 @@
+<!-- 
+  PLACEHOLDER: Add 3 project photos
+  
+  Required files:
+  1. kitchen-before-after.jpg
+  2. exterior.jpg  
+  3. salad-house.jpg (or other commercial project)
+  
+  Specs for each:
+  - Format: JPEG
+  - Dimensions: 1200x800px (or similar aspect ratio)
+  - Quality: 60-75% (keep file size under 200 KB each)
+  - Optimize at: https://squoosh.app or https://tinypng.com
+  
+  Tips:
+  - Use real project photos (with client permission)
+  - Before/after shots work best for kitchens/bathrooms
+  - Make sure images are well-lit and professional looking
+  - Include recognizable local elements if possible
+  
+  Place files in this images/ folder
+-->

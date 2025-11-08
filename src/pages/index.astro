@@ -3,7 +3,8 @@ import Container from "@/components/container.astro";
 import Cta from "@/components/cta.astro";
 import Features from "@/components/features.astro";
 import Hero from "@/components/hero.astro";
-import Logos from "@/components/logos.astro";
+import Projects from "@/components/projects.astro";
+import GoogleReviews from "@/components/google-reviews.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
@@ -11,7 +12,42 @@ import Layout from "@/layouts/Layout.astro";
   <Container>
     <Hero />
     <Features />
-    <Logos />
+    <Projects />
+  <GoogleReviews />
+    <section class="mt-20">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Serving Your Neighborhood</h2>
+      <p class="text-slate-600 mt-4 max-w-3xl">
+        We focus on two main clusters for faster response and better scheduling:
+        <strong> Summit / Short Hills / Mendham corridor</strong> (incl. Chatham, Springfield, Union) and
+        <strong> Blairstown & Warren County</strong>. If you're nearby, we're happy to help—just ask.
+      </p>
+      <a href="/contact" class="inline-block mt-4 text-brand font-medium">Not sure if we cover your town? Contact us →</a>
+    </section>
     <Cta />
   </Container>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'JF Contracting',
+      url: 'https://jfcontracting.biz',
+  telephone: '+1-609-598-6392',
+      areaServed: [
+        'Summit NJ',
+        'Short Hills NJ',
+        'Mendham NJ',
+        'Chatham NJ',
+        'Springfield NJ',
+        'Union NJ',
+        'Blairstown NJ',
+        'Warren County NJ'
+      ],
+      image: 'https://jfcontracting.biz/opengraph.jpg',
+      email: 'info@jfcontracting.biz',
+      address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
+      openingHours: 'Mo-Fr 08:00-18:00, Sa 09:00-15:00',
+      priceRange: '$$',
+      description: 'Family-run contractor delivering quality renovations, bathrooms, carpentry, and painting across Northern New Jersey.'
+    })}
+  </script>
 </Layout>
