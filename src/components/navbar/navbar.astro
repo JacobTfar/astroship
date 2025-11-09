@@ -5,26 +5,10 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  {
-    title: "Home",
-    path: "/",
-  },
-  {
-    title: "Services",
-    path: "/services",
-  },
-  {
-    title: "Reviews",
-    path: "/reviews",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
+  { title: "Home", path: "/" },
+  { title: "Reviews", path: "/reviews" },
+  { title: "Services", path: "/services" },
+  { title: "Contact", path: "/contact" },
 ];
 ---
 
@@ -59,9 +43,7 @@ const menuitems = [
           <Link href="tel:+1-609-598-6392" style="muted" block size="md">Call Now</Link>
           <Link href="/contact" size="md" block>Get Quote</Link>
         </div>
-      </MenuItems>
-    </Astronav>
-    <div>
+  </MenuItems>
       <div class="hidden lg:flex items-center gap-4">
         <a href="tel:+1-609-598-6392" class="text-gray-600 hover:text-gray-900">(609) 598-6392</a>
         <Link href="/contact" size="md">Get a Free Quote</Link>

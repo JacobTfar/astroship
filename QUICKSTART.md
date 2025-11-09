@@ -35,7 +35,7 @@ Then drag `dist/` folder to <https://app.netlify.com>
 npm install -g netlify-cli
 netlify login
 netlify init
-netlify deploy --prod
+netlify deploy --prod --dir=dist
 ```
 
 Form submissions will appear in Netlify dashboard automatically.

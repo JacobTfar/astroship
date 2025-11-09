@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Optional: redirects for legacy routes
+# [[redirects]]
+#   from = "/pricing"
+#   to = "/"
+#   status = 301
